@@ -1,0 +1,246 @@
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f5f0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background-color: #E7EBC5;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 100px;
+    float: left;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #000000;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c7a17a;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(58, 44, 44, 0.7), rgba(58, 44, 44, 0.7)), 
+                url('images/cafe1.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 80px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Sobre Nós */
+.sobre {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.sobre h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #3a2c2c;
+}
+
+.sobre-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Galeria */
+.galeria {
+    padding: 80px 0;
+    background-color: #f9f5f0;
+}
+
+.galeria h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #3a2c2c;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.galeria-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria-item p {
+    padding: 15px;
+    text-align: center;
+    font-weight: 300;
+    color: #3a2c2c;
+    background-color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #3a2c2c;
+    color: #f9f5f0;
+    padding: 60px 0 0;
+}
+
+.footer-info {
+    margin-bottom: 40px;
+}
+
+.footer-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #c7a17a;
+}
+
+.footer-info p {
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.redes-sociais img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.redes-sociais img:hover {
+    opacity: 1;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2a1e1e;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    
+    nav ul {
+        float: none;
+        text-align: center;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+}
